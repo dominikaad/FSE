@@ -16,5 +16,5 @@ for i in range(0,3):
         total_dis+=distance
         print(f'#  {h}           {distance}')
     print('=============================================================')
-    print(f'Total Distance:   {total_dis}')
+    print(f'Total Distance:   {total_dis}\n\n\n')
     file.close()

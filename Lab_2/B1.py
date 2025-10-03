@@ -14,7 +14,7 @@ for i in range(0,3):
         distance_0 = float(measure[0].strip())*scale
         distance = round(distance_0,1)
         total_dis+=distance
-        print(f'#  {h}           {distance}')
+        print(f'#{h}  {measure[0].strip()}          {distance}')
     print('=============================================================')
     print(f'Total Distance:   {total_dis}\n\n\n')
     file.close()

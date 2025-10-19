@@ -22,13 +22,13 @@ print('Cat and Mouse\n')
 print('\tCat\t\tMouse\tDistance')
 print('-----------------------------------')
 
+
 for i in range(1, amount_inf):
     way = inf_file[i].split('        ')
     player = way[0].strip()
     if player=='M' and flag_game == False:
         way_line = int(way[1])
         way_column = int(way[2])
-
         initial_line_m+=way_line
         initial_column_m+=way_column
         if initial_line_m<=0:
@@ -47,10 +47,12 @@ for i in range(1, amount_inf):
                 column_meeting = initial_column_c
                 break
         flag_m = True
+
+
+
     elif player=='C' and flag_game == False:
         way_line = int(way[1])
         way_column = int(way[2])
-
         initial_line_c+=way_line
         initial_column_c+=way_column
         if initial_line_c<=0:
@@ -69,6 +71,8 @@ for i in range(1, amount_inf):
                 column_meeting = initial_column_c
                 break
         flag_c = True
+
+
     elif player=='P':
         if flag_m==True and flag_c==False:
             print(f'( ?, ?)     ({initial_line_m},{initial_column_m})')
@@ -77,10 +81,8 @@ for i in range(1, amount_inf):
         else:
             distance = abs(initial_line_m-initial_line_c)+abs(initial_column_m-initial_column_c)
             print(f'({initial_line_c},{initial_column_c})     ({initial_line_m},{initial_column_m})      {distance}')
-    # else:
-    #     line_meeting = initial_line_c
-    #     column_meeting = initial_column_c
-    #     break
+
+
 print('------------------------------------\n\n')
 print('Distance\t\tMouse\tCat')
 print(f' \t\t\t\t{distance_mouse}\t\t{distance_cat}\n')

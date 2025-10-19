@@ -2,6 +2,7 @@ for i in range(0,3):
     total_dis = 0
     file = open(f'inmap{i}.dat', 'r', encoding='utf-8')
     mile = file.readlines(1)
+    print(mile)
     a = mile[0].split(' ')
     scale = float(a[2].strip())
     print('Dominika Dergavko\nSimple Map Distance Computations\n')

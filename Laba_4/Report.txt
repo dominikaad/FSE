@@ -1,0 +1,48 @@
+Programmer: Dominika Dergavko
+CS1044 Project 5 Fall 2008
+
+Precipitation report for Blacksburg, VA during December, 2006
+Error		Day		Line
+Invalid		114		12
+Repeated	8		16
+Invalid		32		19
+1		NA
+2		0.0
+1		NA
+2		0.0
+1		NA
+2		0.0
+1		NA
+2		0.0
+1		NA
+2		0.0
+1		NA
+2		0.0
+1		NA
+2		0.0
+1		NA
+2		0.0
+1		NA
+2		0.0
+1		NA
+2		0.0
+1		NA
+2		0.0
+1		NA
+2		0.0
+1		NA
+2		0.0
+1		NA
+2		0.0
+1		NA
+2		0.0
+1		NA
+2		0.0
+1		NA
+2		0.0
+1		NA
+2		0.0
+1		NA
+2		0.0
+1		NA
+2		0.0

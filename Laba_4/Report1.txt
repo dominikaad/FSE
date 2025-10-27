@@ -1,0 +1,33 @@
+Programmer: Dominika Dergavko
+CS1044 Project 5 Fall 2008
+
+Precipitation report for Richland, WA during June, 1996
+Error		Day		Line
+1		0.0
+2		NA
+1		0.0
+2		NA
+1		0.0
+2		NA
+1		0.0
+2		NA
+1		0.0
+2		NA
+1		0.0
+2		NA
+1		0.0
+2		NA
+1		0.0
+2		NA
+1		0.0
+2		NA
+1		0.0
+2		NA
+1		0.0
+2		NA
+1		0.0
+2		NA
+1		0.0
+2		NA
+1		0.0
+2		NA

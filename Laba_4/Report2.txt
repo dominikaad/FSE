@@ -1,0 +1,37 @@
+Programmer: Dominika Dergavko
+CS1044 Project 5 Fall 2008
+
+Precipitation report for Radford, VA during December, 1996
+Error		Day		Line
+Invalid		75		3
+Invalid		43		4
+1		6.64
+2		NA
+1		6.64
+2		NA
+1		6.64
+2		NA
+1		6.64
+2		NA
+1		6.64
+2		NA
+1		6.64
+2		NA
+1		6.64
+2		NA
+1		6.64
+2		NA
+1		6.64
+2		NA
+1		6.64
+2		NA
+1		6.64
+2		NA
+1		6.64
+2		NA
+1		6.64
+2		NA
+1		6.64
+2		NA
+1		6.64
+2		NA

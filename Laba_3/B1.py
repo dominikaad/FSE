@@ -23,6 +23,7 @@ print('\tCat\t\tMouse\tDistance')
 print('-----------------------------------')
 
 
+
 for i in range(1, amount_inf):
     way = inf_file[i].split('        ')
     player = way[0].strip()

@@ -6,6 +6,7 @@ Error		Day		Line
 Invalid		114		12
 Repeated	8		16
 Invalid		32		19
+
 1		NA
 2		0.00
 3		NA
@@ -37,5 +38,6 @@ Invalid		32		19
 29		0.00
 30		NA
 31		NA
+
 Minimum		Maximum		Average
-0.00
+0.00		4.12		0.21

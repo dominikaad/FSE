@@ -7,22 +7,46 @@ def write_error(type, day, line):
     if type=='N':
         answ_file.write(f'Invalid\t\t{day}\t\t{line}\n')
 
-def write_inf(count_num, number, precipitation, len):
-    for k in range(1, count_num+1):
-        if k in number:
-            for t in range(0, len):
-                if k ==number[t]:
-                    if precipitation[t] != 0.00:
-                        count_star = '*'*int((precipitation[t]//0.25)+1)
-                        answ_file.write(f'{str(k)}\t\t{precipitation[t]:.2f} {count_star}\n')
-                    else:
-                        answ_file.write(f'{str(k)}\t\t{precipitation[t]:.2f}\n')
-                    break
-        else:
-            answ_file.write(f'{str(k)}\t\tNA\n')
 
 
+class Write_inf:
+    def __init__(self, count_num, number, precipitation, len):
+        self.count_num = count_num
+        self.number = number
+        self.precipitation = precipitation
+        self.len = len
 
+    def write_inf(self):
+        for k in range(1, self.count_num+1):
+            if k in self.number:
+                for t in range(0, self.len):
+                    if k ==self.number[t]:
+                        if self.precipitation[t] != 0.00:
+                            count_star = '*'*int((self.precipitation[t]//0.25)+1)
+                            answ_file.write(f'{str(k)}\t\t{self.precipitation[t]:.2f} {count_star}\n')
+                        else:
+                            answ_file.write(f'{str(k)}\t\t{self.precipitation[t]:.2f}\n')
+                        break
+            else:
+                answ_file.write(f'{str(k)}\t\tNA\n')
+
+    def count_average(self):
+        sum_precip = 0.00
+        max_precip = 0.00
+        min_precip = 0.00
+        for k in range(1, self.count_num+1):
+            if k in self.number:
+                for t in range(0, self.len):
+                    if k == self.number[t]:
+                        sum_precip += self.precipitation[t]
+                        if self.precipitation[t]>max_precip:
+                            max_precip = self.precipitation[t]
+                        if t==1:
+                            min_precip += self.precipitation[t]
+                        if self.precipitation[t]<min_precip:
+                            min_precip = self.precipitation[t]
+        average = f"{min_precip:.2f}\t\t{max_precip:.2f}\t\t{sum_precip/self.count_num:.2f}"
+        answ_file.write(str(average))
 
 
 for i in range(0,3):
@@ -47,19 +71,11 @@ for i in range(0,3):
     array_num = []
     array_precip = []
     replay_num = 0
-    sum_precip = 0
 
     answ_file.write('Programmer: Dominika Dergavko\n')
     answ_file.write(f'{inf_project}\n')
     answ_file.write(f'Precipitation report for {place} during {data}\n')
     answ_file.write('Error\t\tDay\t\tLine\n')
-
-    # if month == 'January' or month == 'March' or month == 'May' or month == 'July' or month == 'August' or month == 'October' or month == 'December':
-    #     flag_31 = True
-    # elif month == 'April' or month == 'June' or month == 'September' or month == 'November':
-    #     flag_30 = True
-    # elif month == 'February':
-    #     flag_28 = True
 
     for h in range(3, len_inf):
         if len(information[h].split(' '))==1:
@@ -73,6 +89,7 @@ for i in range(0,3):
 
         array_num.append(number)
         len_array_num = len(array_num)
+        print(precipitation)
         array_precip.append(precipitation)
         list_num_precip = dict(zip(array_num, array_precip))
 
@@ -84,9 +101,7 @@ for i in range(0,3):
                     replay_num = key
                     write_error('R', key, h)
                     list_inf[key] = 1
-                    print(list_inf)
-                    # print(precipitation)
-                    # sum_precip += precipitation
+
 
         if month=='January' or month=='March' or month=='May' or month=='July' or month=='August' or month=='October' or month=='December':
             count_num_31+=1
@@ -104,16 +119,24 @@ for i in range(0,3):
             if 0>number or number>28:
                 write_error('N', number, h)
 
+    answ_file.write('\n')
     if count_num_30==len_inf-3:
-        write_inf(30, array_num, array_precip, len_array_num)
+        inf_precip_30 = Write_inf(30, array_num, array_precip, len_array_num)
+        inf_precip_30.write_inf()
+        answ_file.write('\n')
+        answ_file.write('Minimum\t\tMaximum\t\tAverage\n')
+        inf_precip_30.count_average()
     elif count_num_31 == len_inf - 3:
-        write_inf(31, array_num, array_precip, len_array_num)
+        inf_precip_31 = Write_inf(31, array_num, array_precip, len_array_num)
+        inf_precip_31.write_inf()
+        answ_file.write('\n')
+        answ_file.write('Minimum\t\tMaximum\t\tAverage\n')
+        inf_precip_31.count_average()
     elif count_num_28 == len_inf - 3:
-        write_inf(28, array_num, array_precip, len_array_num)
-    answ_file.write('Minimum\t\tMaximum\t\tAverage\n')
-    print(sum_precip)
-    print(count_precip)
-    average = sum_precip/count_precip
-    answ_file.write(str(format(average, ".2f")))
+        inf_precip_28 = Write_inf(28, array_num, array_precip, len_array_num)
+        inf_precip_28.write_inf()
+        answ_file.write('\n')
+        answ_file.write('Minimum\t\tMaximum\t\tAverage\n')
+        inf_precip_28.count_average()
     answ_file.close()
     file.close()

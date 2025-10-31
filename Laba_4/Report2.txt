@@ -5,6 +5,7 @@ Precipitation report for Radford, VA during December, 1996
 Error		Day		Line
 Invalid		75		3
 Invalid		43		4
+
 1		6.64 ***************************
 2		NA
 3		NA
@@ -36,5 +37,6 @@ Invalid		43		4
 29		9.56 ***************************************
 30		NA
 31		NA
+
 Minimum		Maximum		Average
-0.00
+0.00		9.88		1.68

@@ -3,6 +3,7 @@ CS1044 Project 5 Fall 2008
 
 Precipitation report for Richland, WA during June, 1996
 Error		Day		Line
+
 1		0.00
 2		NA
 3		NA
@@ -33,5 +34,6 @@ Error		Day		Line
 28		6.84 ****************************
 29		NA
 30		NA
+
 Minimum		Maximum		Average
-0.00
+0.00		7.40		1.24
